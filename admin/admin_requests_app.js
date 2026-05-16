@@ -1,6 +1,5 @@
-const SUPABASE_URL = "https://uwmyqlydenrzkzrymhvl.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV3bXlxbHlkZW5yemt6cnltaHZsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0NDQ2NjAsImV4cCI6MjA5MzAyMDY2MH0.TCPgHAHhILaD5tFsZiFIgLvH7yuxkrtJ29F5J5oHQrw";
-const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const { url: SUPABASE_URL, anonKey: SUPABASE_ANON_KEY } = window.SUPABASE_CONFIG;
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const TYPE_LABELS = { player:'لاعب', guardian:'ولي أمر', coach:'مدرب', supporter:'داعم', volunteer:'متطوع', academy_member:'عضوية الأكاديمية' };
 const STATUS_LABELS = { new:'جديد', review:'جاهز للمراجعة', reviewing:'جاهز للمراجعة', approved:'مقبول', rejected:'مرفوض', pending:'بانتظار استكمال', needs_completion:'بانتظار استكمال' };
